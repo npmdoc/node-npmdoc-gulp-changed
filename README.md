@@ -1,11 +1,13 @@
-# api documentation for  [gulp-changed (v2.0.0)](https://github.com/sindresorhus/gulp-changed#readme)  [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-changed.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-changed)
+# api documentation for  [gulp-changed (v2.0.0)](https://github.com/sindresorhus/gulp-changed#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-changed.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-changed) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-changed.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-changed)
 #### Only pass through changed files
 
 [![NPM](https://nodei.co/npm/gulp-changed.png?downloads=true)](https://www.npmjs.com/package/gulp-changed)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-changed/build/screen-capture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-gulp_changed_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-changed/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-changed/build/screenCapture.buildNpmdoc.browser.%2Fhome%2Ftravis%2Fbuild%2Fnpmdoc%2Fnode-npmdoc-gulp-changed%2Ftmp%2Fbuild%2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-changed/build/apidoc.html)
 
-![package-listing](https://npmdoc.github.io/node-npmdoc-gulp-changed/build/screen-capture.npmPackageListing.svg)
+![npmPackageListing](https://npmdoc.github.io/node-npmdoc-gulp-changed/build/screenCapture.npmPackageListing.svg)
+
+![npmPackageDependencyTree](https://npmdoc.github.io/node-npmdoc-gulp-changed/build/screenCapture.npmPackageDependencyTree.svg)
 
 
 
