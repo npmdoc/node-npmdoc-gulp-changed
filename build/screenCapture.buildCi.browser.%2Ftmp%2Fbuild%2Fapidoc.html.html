@@ -47,12 +47,21 @@
 }
 </style>
 <h1>api documentation for
-    <a href="https://github.com/sindresorhus/gulp-changed#readme">gulp-changed (v2.0.0)</a>
+    <a>gulp-changed (v2.0.0)</a>
 </h1>
 <h4>Only pass through changed files</h4>
 <div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp-changed">module gulp-changed</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-changed.gulp-changed">
+            function <span class="apidocSignatureSpan"></span>gulp-changed
+            <span class="apidocSignatureSpan">(dest, opts)</span>
+            </a>
+
+        </li>
 
         <li>
 
@@ -78,6 +87,51 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.gulp-changed" id="apidoc.module.gulp-changed">module gulp-changed</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-changed.gulp-changed" id="apidoc.element.gulp-changed.gulp-changed">
+        function <span class="apidocSignatureSpan"></span>gulp-changed
+        <span class="apidocSignatureSpan">(dest, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(dest, opts) =&gt; {
+	opts = Object.assign({
+		cwd: process.cwd(),
+		hasChanged: compareLastModifiedTime
+	}, opts);
+
+	if (!dest) {
+		throw new gutil.PluginError('gulp-changed', '`dest` required');
+	}
+
+	if (opts.transformPath !== undefined &amp;&amp; typeof opts.transformPath !== 'function') {
+		throw new gutil.PluginError('gulp-changed', '`opts.transformPath` needs to be a function');
+	}
+
+	return through.obj(function (file, enc, cb) {
+		const dest2 = typeof dest === 'function' ? dest(file) : dest;
+		let newPath = path.resolve(opts.cwd, dest2, file.relative);
+
+		if (opts.extension) {
+			newPath = gutil.replaceExtension(newPath, opts.extension);
+		}
+
+		if (opts.transformPath) {
+			newPath = opts.transformPath(newPath);
+
+			if (typeof newPath !== 'string') {
+				throw new gutil.PluginError('gulp-changed', '`opts.transformPath` needs to return a string');
+			}
+		}
+
+		opts.hasChanged(this, cb, file, newPath);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
